@@ -1,6 +1,6 @@
 # NPM
-[NPMJS 바로가기](https://www.npmjs.com)
-여러 JS 독립적인 앱, 모듈 설치 가능
+[NPMJS 바로가기](https://www.npmjs.com)  
+: 여러 JS 독립적인 앱, 모듈 설치 가능
 ## 앱 설치 방법
 ```
 1. sudo npm install <appName> -g(해당 앱에 따라 다를 수 있음)  
