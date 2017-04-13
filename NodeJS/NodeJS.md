@@ -23,6 +23,10 @@ git repository: Git에 올라간다면 어떤 repository에 올릴지 지정, gi
 sudo npm install <moduleName>(해당 모듈에 따라 다를 수 있음)  
 sudo npm install <moduleName> --save(완전한 설치, 해당 모듈에 따라 다를 수 있음)  
 ```
+## 모듈 사용법
+```
+require('<moduleName>'); // 해당 모듈 객체를 반환함  
+```
 ## 유용한 모듈
 1. underscore
 - 설치법 :  
@@ -30,8 +34,15 @@ sudo npm install <moduleName> --save(완전한 설치, 해당 모듈에 따라 �
 sudo npm install underscore  
 sudo npm install underscore --save  
 ```
-- 설명 :  
+- 설명 : 배열의 값에 쉽게 접근하는 기능, 이 밖에도 많은 기능을 지원함  
+[UNDERSCORE 바로가기](http://underscorejs.org/)  
 - 사용법 :  
+```
+var _ = require('underscore');  
+var arr = [3,6,9,1,12];  
+console.log(arr[0]);  
+// 이 밖에도 많은 기능을 지원함  
+```
 ## 유용한 앱
 1. uglify
 - 설치법 :  
