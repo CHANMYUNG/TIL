@@ -43,6 +43,28 @@ var arr = [3,6,9,1,12];
 console.log(arr[0]);  
 // 이 밖에도 많은 기능을 지원함  
 ```
+2. path
+- 설명 : 파일 패스를 다룸  
+- 사용법 :  
+  * 메소드 :
+  ```
+  join() : 여러 개의 이름들을 모두 합쳐 하나의 파일 패스로 만들어 줌  
+           파일 패스를 완성할 때 구분자 등을 알아서 조정  
+  dirname() : 파일 패스에서 디렉터리 이름을 반환  
+  basename() : 파일 패스에서 파일의 확장자를 제외한 이름을 반환  
+  extname() : 파일 패스에서 파일의 확장자를 반환
+  ```
+  * 예제 :  
+  ```
+  var path = require('path');  
+
+  // 디렉터리 이름 합치기  
+  var directories = ["users", "mike", "docs"];  
+  var docsDirectory = directories.join(path.sep);  
+
+  // 디렉터리 이름과 파일 이름 합치기  
+  var curPath = path.join('/users/mike','notepad.exe');  
+  ```
 ## 유용한 앱
 1. uglify
 - 설치법 :  
