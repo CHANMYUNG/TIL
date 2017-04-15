@@ -65,6 +65,49 @@ console.log(arr[0]);
   // 디렉터리 이름과 파일 이름 합치기  
   var curPath = path.join('/users/mike','notepad.exe');  
   ```
+3. url
+- 설명 : 일반 주소 문자열을 URL 객체로 만들거나 URL객체를 일반 문자열로 변환하는 일을 함  
+- 사용법 :
+  * 메소드 :  
+  ```
+  parse() : 주소 문자열을 파싱해 URL 객체로 만들어 줌  
+  format() : URL 객체를 주소 문자열로 변환  
+  ```
+  * 예제 :  
+  ```
+  const url = require('url');  
+
+  var URL = url.parse('http://www.naver.com'); // parse : 문자열을 url객체로 변환  
+  URL.port = 8080; // URL객체의 port를 8080으로 바꿈  
+  var stringURL = url.format(URL); // format : url객체를 문자열로  
+
+
+  console.dir(URL); // url 객체 'URL'의 모든 속성을 출력  
+  console.log(stringURL);  
+  ```
+4. querystring  
+- 설명 : 요청 파라미터를 분리  
+- 사용법 :  
+  * 메소드 :  
+  ```
+  parse() : 요청 파라미터 문자열을 파싱해 요청 파라미터 객체로 만들어 줌  
+  stringify() : 요청 파라미터 객체를 문자열로 변환함  
+  ```
+  * 예제 :  
+  ```
+  const url = require('url');  
+
+  var URL = url.parse('https://m.search.naver.com/search.naver?query=steve+jobs&where=m&sm=mtp_hty');  
+
+  const querystring = require('querystring');  
+
+  var param = querystring.parse(URL.query); // 요청 파라미터 문자열을 파싱해 요청 파라미터 객체로 만들어 반환  
+  var paramString = querystring.stringify(param); // 요청 파라미터 객체를 문자열로 변환  
+
+  console.log(param.query);  
+  console.log(paramString);  
+  ```
+
 ## 유용한 앱
 1. uglify
 - 설치법 :  
