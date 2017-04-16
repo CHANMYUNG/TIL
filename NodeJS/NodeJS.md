@@ -27,7 +27,7 @@ sudo npm install <moduleName> --save(완전한 설치, 해당 모듈에 따라 �
 ```
 require('<moduleName>'); // 해당 모듈 객체를 반환함  
 ```
-## 유용한 모듈
+## 모듈 사전
 1. underscore
 - 설치법 :  
 ```
@@ -107,8 +107,7 @@ console.log(arr[0]);
   console.log(param.query);  
   console.log(paramString);  
   ```
-
-## 유용한 앱
+## 앱 사전
 1. uglify
 - 설치법 :  
 ```
@@ -151,7 +150,7 @@ var name = '소녀시대';
 console.log('이름 : %s', name);
 ```
 
-**객체 안에 들어 있는 속성의 이름은 하나의 변수로 생각할 수 있으며, 접근은 . 또는 []두가지 방식으로 할 수 있다.**  
+**객체 안에 들어 있는 속성의 이름은 하나의 변수로 생각할 수 있으며, 접근은 . 또는 [] 두가지 방식으로 할 수 있다.**  
 ### 객체 내 속성 접근 예제 :
 ```
 var Person = {};
@@ -163,5 +162,93 @@ Person.mobile = '010-1234-5678';
 console.log('나이 : %d', Person.age);
 console.log('이름 : %s', Person.name);
 console.log('전화 : %s', Person['mobile']);
+```
+## 배열
+### 개념
+여러 개의 데이터를 **하나의 변수** 에 담아둠  
+배열 안에 들어 있는 요소(또는 원소, item)들은 대괄호를 이용해 접근할 수 있음  
+### 선언 방법
+```
+var 배열이름 = [요소1,요소2,요소3, .. ,요소n];
+```
+### 선언 예제
+```
+var Users = [{name : '소녀시대', age : 20},{name : '걸스데이', age : 22}];
+```
+### 접근 방법
+**배열의 인덱스(index)는 0부터 시작함**  
+**따라서 n번째 요소에 접근할 때에는 배열이름[n-1]의 형태로 접근해야 함(이때 n≠0)**  
+```
+var Users = [{name : '소녀시대', age : 20},{name : '걸스데이', age : 22}]; // Users배열에 두 객체를 담음
+var GirlsDay = Users[1]; // Users 내의 2번째 요소 객체를 GirlsDay에 담음
+```
+**배열을 가공하는 방법에 대해서는 아래 '배열을 가공하는 함수'에서 다룸**
+## 함수
+### 선언
+자바스크립트는 자료형을 표시하지 않기 때문에 함수를 선언하고 호출하는 형태도 약간 달라짐  
+#### Java에서의 함수 선언과 Javascript에서의 함수 선언 비교
+```
+// Java
+int add(int a, int b){ ... }
+
+// Javascript
+var add = function(a, b){ ... }; // 변수 챕터에서 설명했듯 Javascript에서는 변수에 함수를 할당할 수 있음 이때 '할당'은 표현식임을 의미하므로 세미콜론(;)을 붙여 주는 것이 좋음
+function add2(a, b){ ... } // 함수를 바로 선언할 수도 있음 이때는 선언문의 형태를 띄므로 세미콜론(;)을 붙이지 않음
+```
+**또한 객체의 속성값으로 함수를 할당할 수 있음**
+#### Javascript 객체 내 속성 값 함수 할당 예제
+```
+// 1. 객체 생성과 동시에 함수를 할당
+// 객체 생성(선언)
+var Person = {
+  age : 15,
+  name : 'Terry Yoon',
+  add_inside : function(a, b){
+      return a + b;
+    }
+  };
+
+// 2. 객체 생성 후 객체 내에 속성값 add_outside를 만들어 함수를 할당
+Person.add_outside = function(a, b){
+  return a + b;
+  };
+
+// 3. 미리 다른 함수를 속성에 집어 넣음
+function add(a, b){
+  return a + b;
+}
+Person.add = add;
+```
+### 호출
+자바스크립트의 함수 호출은 자바에서와 비슷하나 _자료형이 따로 존재하지 않아 return타입을 명세하지 않기 때문에_ 반환받은 값을 저장하는 변수도 **var** 형이라는 점에서 다름  
+#### Java에서의 함수 호출과 Javascript에서의 함수 호출 비교
+```
+// Java
+// 함수 선언
+int add(int a, int b){
+  int result = a + b;
+  return result;
+}
+// 함수 호출
+int result = add(10, 20); // result = 30;
+
+// Javascript
+// 함수 선언
+
+// 선언 방법 1 (익명함수를 할당)
+var add = function(a, b){
+  var result = a + b;
+  return result;
+}; // 익명함수를 '할당'한다는 의미를 갖고있어 선언문이 아닌 표현식이기 때문에 세미콜론(;)을 붙여 주는 것이 좋음
+
+// 선언 방법 2 (함수를 선언)
+function add2(a, b){
+  var result = a + b;
+  return result;
+  } // 선언문의 형태이기 때문에 세미콜론(;)을 붙이지 않음
+
+// 함수 호출
+var result = add(10, 20); // result = 30;
+var result2 = add2(10, 20) // result2 = 30;
 ```
 -----------------------------------------------------
