@@ -83,3 +83,26 @@ server.on('close', function(){
   // 이 밖에 처리할 코드 작성
   });
 ```
+## 여러 형식의 파일들을 전송하기
+
+### Content-Type 헤더
+**서버에서는 응답하면서 일반 데이터 이외의 다른 형식의 파일들 또한 전송할 수 있음**  
+**-> Content-Type 헤더의 값을 전송하고자 하는 파일 형식에 맞는 MIME TYPE으로 지정해주면 됨**  
+
+### MIME TYPE
+* MIME TYPE : **M**ultipurpose **I**nternet **M**ail **E**xtensions의 약어로 메시지의 내용이 어떤 형식인지 알려주기 위해 정의한 인터넷 표준  
+
+* 대표적인 MIME Type
+Content Type의 값(MIME Type) | 설명
+---|---
+text/plain | 일반 텍스트 문서
+text/html | HTML 문서
+text/css | CSS 문서
+text/xml | XML 문서
+image/jpeg, image/png | JPEG 파일, PNG 파일
+video/mpeg, audio/mp3 | MPEG 비디오 파일, MP3 음악 파일
+application/zip | ZIP 압축 파일
+
+
+
+
