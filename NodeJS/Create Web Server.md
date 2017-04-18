@@ -92,7 +92,8 @@ server.on('close', function(){
 ### MIME TYPE
 * MIME TYPE : **M**ultipurpose **I**nternet **M**ail **E**xtensions의 약어로 메시지의 내용이 어떤 형식인지 알려주기 위해 정의한 인터넷 표준  
 
-* 대표적인 MIME Type
+* 대표적인 MIME Type  
+
 Content Type의 값(MIME Type) | 설명
 ---|---
 text/plain | 일반 텍스트 문서
