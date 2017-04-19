@@ -7,14 +7,17 @@
 5. 연결을 종료한다 **Close**
 
 ## 간단한 웹 서버 만들기
+
 1. http모듈을 로딩한다.
 ```
 var http = require('http');
 ```
+
 2. 웹 서버 객체를 만든다.  
 ```
 var server = http.createServer();
 ```
+
 3. 웹 서버 포트를 지정하고 시작해 요청을 대기한다.  
 ```
 var port = 8080;
@@ -22,6 +25,7 @@ server.listen(port, function(){
   console.log('웹 서버가 시작되었습니다. : %d', port);
   });
 ```
+
 4. 서버 이벤트를 등록한다.  
   - 서버 이벤트 목록
 
