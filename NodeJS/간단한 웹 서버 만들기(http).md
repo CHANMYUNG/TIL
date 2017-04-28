@@ -133,7 +133,7 @@ server.on('request', function(req, res){
 ``` 
 ### 예제 리소스
 **요청이 왔을 때 보낼 이미지, 아래 이미지를 예제 소스 파일이 있는 디렉토리에 다운로드 받으세요**  
-![NodeJS](./nodejs.png)
+![NodeJS](./http_resources/nodejs.png)
 
 ## 클라이언트에서 요청이 있을 때 파일 읽어 응답하기
 
