@@ -1,9 +1,9 @@
 # Node.js
-![NodeJS](./readme_resources/nodejs.png)
+![NodeJS](./Resources/readme/nodejs.png)
 **이 문서는 Node.js에 대한 내용을 다루고 있습니다.**
 ----------------------------------------------
 # 사용한 책
-![Doit! Node.js 프로그래밍](./readme_resources/DoitNodeJS.jpeg)
+![Doit! Node.js 프로그래밍](./Resources/readme/DoitNodeJS.jpeg)
 ----------------------------------------------
 # 참고한 문서/사이트
 * [생활코딩-node.js](https://opentutorials.org/course/86)
