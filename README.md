@@ -1,5 +1,5 @@
 # STOPPED
-**Plz visit by blog**  
+**Plz visit my blog**  
 [Terry blog](https://nooheat.github.io)
 # TIL
 Today I Learned
