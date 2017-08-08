@@ -1,3 +1,6 @@
+# STOPPED
+**Plz visit by blog**  
+[Terry blog](https://nooheat.github.io)
 # TIL
 Today I Learned
 
