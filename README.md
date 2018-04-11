@@ -1,6 +1,4 @@
-# STOPPED
-**Plz visit my blog**  
-[Terry blog](https://nooheat.github.io)
+
 # TIL
 Today I Learned
 
@@ -9,6 +7,7 @@ Today I Learned
 
 # Contents
 - Android
+- HTTP
 - Node.js
-- C# WPF (추가 예정)
-- C# Xamarin (추가 예정)
+- Spring Boot
+  - JPA
