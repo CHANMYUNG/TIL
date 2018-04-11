@@ -9,17 +9,17 @@
 ## 간단한 웹 서버 만들기
 
 1. http모듈을 로딩한다.
-```
+```js
 var http = require('http');
 ```
 
 2. 웹 서버 객체를 만든다.  
-```
+```js
 var server = http.createServer();
 ```
 
 3. 웹 서버 포트를 지정하고 시작해 요청을 대기한다.  
-```
+```js
 var port = 8080;
 server.listen(port, function(){
   console.log('웹 서버가 시작되었습니다. : %d', port);
@@ -35,7 +35,7 @@ server.listen(port, function(){
   request | 클라이언트가 요청할 때 발생하는 이벤트
   close | 서버를 종료할 때 발생하는 이벤트
 
-```
+```js
 // 클라이언트 연결 이벤트 처리
 server.on('connection', function(socket){
   var addr = socket.address();
@@ -56,7 +56,7 @@ server.on('close', function(){
 ```
 
 5. 종합
-```
+```js
 // http 모듈 로딩
 var http = require('http');
 
@@ -100,7 +100,7 @@ end([data],[, encoding],[, callback]) | 클라이언트로 응답을 전송한�
 ## 파일을 스트림으로 읽어 응답 보내기
 파일을 스트림 객체로 읽어 들인 후 **pipe() 메소드**로 응답 객체와 연결하면 별다른 코드 없이도 파일에 응답을 보낼 수 있다.  
 ### 예제코드
-```
+```js
 const http = require('http');
 const fs = require('fs');
 

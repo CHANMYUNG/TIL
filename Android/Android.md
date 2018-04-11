@@ -70,9 +70,10 @@
 
 # TIP.
 - 두 줄 사이의 간격을 만드는방법  
-```
+```xml
     <LinearLayout  
         android:layout_width="match_parent"  
-        android:layout_height="XXdp"></LinearLayout>;  
+        android:layout_height="XXdp">
+    </LinearLayout>
 ```
   세로로 XXdp만큼의 간격을 생성함   
